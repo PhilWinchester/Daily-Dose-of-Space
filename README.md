@@ -1,4 +1,4 @@
-#Instagram Algorithm
+#Instagram Hit Algorithm
 
 A simple web app that will tell you whether you need to get your filters out or not.
 
