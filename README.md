@@ -1,34 +1,16 @@
-#Open Source NASA
-#Daily Dose of Space
+#Instagram Algorithm
 
-Using NASA API to showcase the data that they let the public use. If something tickles your fancy you can tweet about it. For their images that require Lat/Long, use Google API to get current Location.
+A simple web app that will tell you whether you need to get your filters out or not.
 
-Custom Page based on user. You can reorganize the page based on your preferences.
+Implementation:
+Taking data from ncdc.noaa.gov, this app compares it with http://openweathermap.org/api to check for cloud coverage. These are two simple inputs, but give a base layer of data to inform the user if there will be a special sunset or not. Getting the user location with HTML5 geolaction and their sunset time with http://sunrise-sunset.org/api, will filter the data and allow the user to determine if the results are accurate or not.
 
-- Astronomy Picture of the Day
-  - Image with option to click and get blurb? on hover blurb?
+User Story:
+A user will have a simple login page that will log them in, or register them. The main page is a simple icon display that will inform the user about their sunset likelihood. Finally the last page allows the user to select how the sunset actually is, and will give feedback on how accurate the algorithm is.
 
-- Asteroids NeoWS?
- - Dunno how to use it nicely yet
+Inspiration:
+This is a slimmed down implementation of https://sunsetwx.com/ and is scaled for mobile use and simple user interaction.
 
-- EPIC
- - only returns specific path to concatenate into NASA URL
- - <img src="http://epic.gsfc.nasa.gov/epic-archive/natural/png/epic_1b_20151031202505_01.png" alt="Epic URL. Only change after /png/str.png" />
-
-- EONET
-  - Dunno how to use it nicely
-
-- Earth
- - Get current location with google maps then pass long and lat to EARTH and then load photo
-
-- MARS ROVER
- - Dropdown for different cameras
-
-- Sounds
- - Not sure how to play this. Could be cool background noise?
-
-- Trek
- - Dunno how to use it nicely
-
-- Front End
- - Scroll Magic for Fanciness?
+Difficulties:
+NOAA data is rather complicated and I don't know how to query for the data I want and when I can get data back I don't know what it means.
+ - http://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:28801&startdate=2016-10-25&enddate=2016-10-26 queries zipcode 28801 from yesterday till today. However, if I switch to zipcode 10025 then I get no results back. Is that because there is no data for that zip or because I broke it?
