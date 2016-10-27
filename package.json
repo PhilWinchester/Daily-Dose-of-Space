@@ -21,6 +21,7 @@
     "mongodb": "^2.2.11",
     "morgan": "^1.7.0",
     "node-fetch": "^1.6.3",
+    "node-sunsetwx": "0.0.1",
     "path": "^0.12.7"
   }
 }

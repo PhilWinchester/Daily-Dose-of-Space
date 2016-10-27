@@ -4,9 +4,8 @@ const logger               = require("morgan");
 const bodyParser           = require("body-parser");
 const path                 = require("path");
 const methodOverride       = require("method-override");
-const sha256               = require('js-sha256');
 
-const nasaService          = require("./services/nasa");
+const mapRoutes            = require("./routes/maps");
 
 const app                  = express();
 const PORT                 = process.argv[2] || process.env.PORT || 3000;
@@ -19,12 +18,14 @@ app.use(methodOverride('_method'));
 app.set('view engine', 'ejs');
 app.set("views", "views");
 
+app.use("/maps", mapRoutes);
+
 app.listen(PORT, () => console.warn("server up and running on->", PORT));
 
-app.get("/", nasaService.getApod, nasaService.getEpic, (req,res) => {
-  res.render('index', {
-    apodData: res.apod,
-    epicData: res.epic,
-  });
-  // res.json(res.apod);
+app.get("/login", (req,res) => {
+  res.render("login");
+});
+
+app.get("/location", (req,res) => {
+  res.render("./mapDemos/mapsCurrLoc");
 });
