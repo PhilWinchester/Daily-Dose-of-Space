@@ -1,0 +1,487 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "ms",
+                "first": "gertrude",
+                "last": "franklin"
+            },
+            "location": {
+                "street": "4516 groveland terrace",
+                "city": "rockhampton",
+                "state": "northern territory",
+                "postcode": 6012
+            },
+            "email": "gertrude.franklin@example.com",
+            "login": {
+                "username": "purplefish571",
+                "password": "maxim"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "mrs",
+                "first": "afet",
+                "last": "sinanoğlu"
+            },
+            "location": {
+                "street": "6907 şehitler cd",
+                "city": "trabzon",
+                "state": "balıkesir",
+                "postcode": 57621
+            },
+            "email": "afet.sinanoğlu@example.com",
+            "login": {
+                "username": "greenmeercat495",
+                "password": "morning"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "august",
+                "last": "petersen"
+            },
+            "location": {
+                "street": "6560 søgade",
+                "city": "lundby",
+                "state": "sjælland",
+                "postcode": 51695
+            },
+            "email": "august.petersen@example.com",
+            "login": {
+                "username": "yellowmeercat229",
+                "password": "grapes"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "arnold",
+                "last": "gibson"
+            },
+            "location": {
+                "street": "6495 bollinger rd",
+                "city": "west palm beach",
+                "state": "georgia",
+                "postcode": 83497
+            },
+            "email": "arnold.gibson@example.com",
+            "login": {
+                "username": "whitefrog280",
+                "password": "aside"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "vincent",
+                "last": "bergeron"
+            },
+            "location": {
+                "street": "9764 3rd st",
+                "city": "deer lake",
+                "state": "manitoba",
+                "postcode": 62640
+            },
+            "email": "vincent.bergeron@example.com",
+            "login": {
+                "username": "beautifulmouse603",
+                "password": "consumer"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "ms",
+                "first": "angie",
+                "last": "wallace"
+            },
+            "location": {
+                "street": "8959 church lane",
+                "city": "armagh",
+                "state": "south yorkshire",
+                "postcode": "EG3 3RP"
+            },
+            "email": "angie.wallace@example.com",
+            "login": {
+                "username": "organictiger144",
+                "password": "dallas1"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "ms",
+                "first": "pihla",
+                "last": "kumpula"
+            },
+            "location": {
+                "street": "5156 mannerheimintie",
+                "city": "kuopio",
+                "state": "southern ostrobothnia",
+                "postcode": 98756
+            },
+            "email": "pihla.kumpula@example.com",
+            "login": {
+                "username": "organicbutterfly251",
+                "password": "putter"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "luis",
+                "last": "olivier"
+            },
+            "location": {
+                "street": "8663 place de la mairie",
+                "city": "le havre",
+                "state": "drôme",
+                "postcode": 10191
+            },
+            "email": "luis.olivier@example.com",
+            "login": {
+                "username": "heavyfrog968",
+                "password": "2002"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "محمد",
+                "last": "قاسمی"
+            },
+            "location": {
+                "street": "8402 میدان صادقیه",
+                "city": "آبادان",
+                "state": "زنجان",
+                "postcode": 63938
+            },
+            "email": "محمد.قاسمی@example.com",
+            "login": {
+                "username": "browncat166",
+                "password": "popcorn"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "derrick",
+                "last": "may"
+            },
+            "location": {
+                "street": "8146 e sandy lake rd",
+                "city": "spokane",
+                "state": "arkansas",
+                "postcode": 59598
+            },
+            "email": "derrick.may@example.com",
+            "login": {
+                "username": "redgorilla762",
+                "password": "mimi"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "akseli",
+                "last": "wirtanen"
+            },
+            "location": {
+                "street": "5664 suvantokatu",
+                "city": "huittinen",
+                "state": "south karelia",
+                "postcode": 99649
+            },
+            "email": "akseli.wirtanen@example.com",
+            "login": {
+                "username": "ticklishduck952",
+                "password": "puffin"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "maurice",
+                "last": "wright"
+            },
+            "location": {
+                "street": "8330 shady ln dr",
+                "city": "plano",
+                "state": "colorado",
+                "postcode": 29171
+            },
+            "email": "maurice.wright@example.com",
+            "login": {
+                "username": "smallwolf796",
+                "password": "whale"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "mrs",
+                "first": "anna",
+                "last": "gutierrez"
+            },
+            "location": {
+                "street": "1577 paseo de extremadura",
+                "city": "málaga",
+                "state": "comunidad valenciana",
+                "postcode": 53656
+            },
+            "email": "anna.gutierrez@example.com",
+            "login": {
+                "username": "organicfish132",
+                "password": "running"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "mrs",
+                "first": "bobbie",
+                "last": "herrera"
+            },
+            "location": {
+                "street": "4128 hunters creek dr",
+                "city": "bathurst",
+                "state": "tasmania",
+                "postcode": 2752
+            },
+            "email": "bobbie.herrera@example.com",
+            "login": {
+                "username": "smalllion726",
+                "password": "colors"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "miss",
+                "first": "noémie",
+                "last": "lévesque"
+            },
+            "location": {
+                "street": "4254 elgin st",
+                "city": "red rock",
+                "state": "ontario",
+                "postcode": 46818
+            },
+            "email": "noémie.lévesque@example.com",
+            "login": {
+                "username": "blackduck107",
+                "password": "cubs"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "madame",
+                "first": "mathilde",
+                "last": "pierre"
+            },
+            "location": {
+                "street": "7100 avenue des ternes",
+                "city": "st-saphorin-sur-morges",
+                "state": "luzern",
+                "postcode": 7738
+            },
+            "email": "mathilde.pierre@example.com",
+            "login": {
+                "username": "heavywolf916",
+                "password": "close",
+                "salt": "nP7HP2hq"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "denis",
+                "last": "alves"
+            },
+            "location": {
+                "street": "1049 rua dezessete ",
+                "city": "varginha",
+                "state": "bahia",
+                "postcode": 28930
+            },
+            "email": "denis.alves@example.com",
+            "login": {
+                "username": "brownpanda652",
+                "password": "poodle",
+                "salt": "hkU8oW86"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "monsieur",
+                "first": "valentin",
+                "last": "meyer"
+            },
+            "location": {
+                "street": "1298 boulevard de la duchère",
+                "city": "reverolle",
+                "state": "appenzell ausserrhoden",
+                "postcode": 7505
+            },
+            "email": "valentin.meyer@example.com",
+            "login": {
+                "username": "blueswan555",
+                "password": "blackhaw"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "mrs",
+                "first": "adriana",
+                "last": "henke"
+            },
+            "location": {
+                "street": "3186 mühlenweg",
+                "city": "köln",
+                "state": "saarland",
+                "postcode": 77833
+            },
+            "email": "adriana.henke@example.com",
+            "login": {
+                "username": "heavymouse409",
+                "password": "nonono"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "mrs",
+                "first": "judith",
+                "last": "arnold"
+            },
+            "location": {
+                "street": "5879 poststraße",
+                "city": "neuburg-schrobenhausen",
+                "state": "bayern",
+                "postcode": 95431
+            },
+            "email": "judith.arnold@example.com",
+            "login": {
+                "username": "beautifulfish828",
+                "password": "goalie"
+            }
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "miss",
+                "first": "alexis",
+                "last": "lee"
+            },
+            "location": {
+                "street": "5470 portsmouth drive",
+                "city": "wellington",
+                "state": "tasman",
+                "postcode": 88479
+            },
+            "email": "alexis.lee@example.com",
+            "login": {
+                "username": "blackfish932",
+                "password": "foreplay"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "hudson",
+                "last": "moore"
+            },
+            "location": {
+                "street": "5825 northgate",
+                "city": "auckland",
+                "state": "auckland",
+                "postcode": 50308
+            },
+            "email": "hudson.moore@example.com",
+            "login": {
+                "username": "whitebutterfly131",
+                "password": "scarlet"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "adam",
+                "last": "jørgensen"
+            },
+            "location": {
+                "street": "3316 frederiksgade",
+                "city": "nimtofte",
+                "state": "midtjylland",
+                "postcode": 76434
+            },
+            "email": "adam.jørgensen@example.com",
+            "login": {
+                "username": "brownmeercat886",
+                "password": "mykids"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "david",
+                "last": "vidal"
+            },
+            "location": {
+                "street": "4635 rue de la barre",
+                "city": "grenoble",
+                "state": "haute-loire",
+                "postcode": 11005
+            },
+            "email": "david.vidal@example.com",
+            "login": {
+                "username": "silverbird985",
+                "password": "thursday"
+            }
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "mr",
+                "first": "kazim",
+                "last": "van lit"
+            },
+            "location": {
+                "street": "8749 paardenveld",
+                "city": "leudal",
+                "state": "gelderland",
+                "postcode": 91417
+            },
+            "email": "kazim.vanlit@example.com",
+            "login": {
+                "username": "smallgoose846",
+                "password": "1021"
+            }
+        }
+    ],
+    "info": {
+        "seed": "ae2130b23f1ee54e",
+        "results": 25,
+        "page": 1,
+        "version": "1.1"
+    }
+}

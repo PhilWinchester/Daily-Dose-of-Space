@@ -3,7 +3,7 @@
 A simple web app that will tell you whether you need to get your filters out or not.
 
 Implementation:
-Taking data from ncdc.noaa.gov, this app compares it with http://openweathermap.org/api to check for cloud coverage. These are two simple inputs, but give a base layer of data to inform the user if there will be a special sunset or not. Getting the user location with HTML5 geolaction and their sunset time with http://sunrise-sunset.org/api, will filter the data and allow the user to determine if the results are accurate or not.
+Taking data from several weather api's, this app will average out the values and calculate the likelihood of a special sunset in your area. These are two simple inputs, but give a base layer of data to inform the user if there will be a special sunset or not. Getting the user location with HTML5 geolaction and their sunset time with http://sunrise-sunset.org/api, will filter the data and allow the user to determine if the results are accurate or not.
 
 User Story:
 A user will have a simple login page that will log them in, or register them. The main page is a simple icon display that will inform the user about their sunset likelihood. Finally the last page allows the user to select how the sunset actually is, and will give feedback on how accurate the algorithm is.
