@@ -1,3 +1,0 @@
-SunsetWX Demo:
-
-curl -X "POST" "https://sunburst.sunsetwx.com/v1/login" -d "email=philipwinc@gmail.com" -d "password=Dtat25000"
