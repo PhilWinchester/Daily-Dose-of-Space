@@ -45,21 +45,6 @@ function getUserById(id) {
   });
 };
 
-function getUserByIdMW(req, res, next) {
-  return getDB().then((db) => {
-    // const promise = new Promise((resolve, reject) => {
-      db.collection('users')
-        .findOne({ _id: ObjectID(req.session.userId) }, (findError, user) => {
-          if (findError) reject(findError);
-          res.user = user;
-          // console.log("Middlewear user - ", user);
-          db.close();
-          next();
-        });
-    });
-    // return promise;
-};
-
 function getUserByUsername(username) {
   return getDB().then((db) => {
     const promise = new Promise((resolve, reject) => {
@@ -73,6 +58,22 @@ function getUserByUsername(username) {
     return promise;
   });
 };
+
+function getUserByIdMW(req, res, next) {
+  return getDB().then((db) => {
+      db.collection('users')
+        .findOne({ _id: ObjectID(req.session.userId) }, (findError, user) => {
+          if (findError) reject(findError);
+          res.user = user;
+          db.close();
+          next();
+        });
+    });
+};
+
+function generateSunsetToken(req,res,next) {
+
+}
 
 module.exports = {
   createUser,
