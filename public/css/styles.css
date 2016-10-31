@@ -1,7 +1,59 @@
 body{
   background-color: dodgerblue;
+  position: relative;
 }
-img {
-  width: 100vw;
-  height: 100vh;
+header{
+  position: relative;
+}
+nav{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*styling for landing page only */
+a{
+  background-color: firebrick;
+  color: white;
+  text-decoration: none;
+
+  border-radius: .1rem;
+  padding: 4vh 2vw;
+  margin: 2vw;
+  box-shadow: 3px 3px 5px #222;
+}
+a:hover{
+  box-shadow: 6px 6px 5px #222;
+}
+a:active{
+  box-shadow: 3px 3px 5px #222;
+}
+/*styleing for signup/login page*/
+input[type=email], input[type=password], input[type=text] {
+  margin: 2vh;
+  padding: 4px 6px;
+  font-size: 18px;
+  width: 30vw;
+  transition: width 1s ease-in-out;
+}
+input[type=email]:focus, input[type=password]:focus, input[type=text]:focus {
+  width: 50vw;
+  border: #555;
+  back
+}
+input[type=submit]{
+  background-color: firebrick;
+  color: white;
+  font-size: 18px;
+
+  border-radius: .1rem;
+  padding: 2vh 1vw;
+  margin: 2vw;
+  box-shadow: 3px 3px 5px #222;
+}
+input[type=submit]:hover{
+  box-shadow: 6px 6px 5px #222;
+}
+input[type=submit]:active{
+  box-shadow: 3px 3px 5px #222;
 }

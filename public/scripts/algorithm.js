@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Error: " + err);
   });
 
-
 //function to validate all data brought in from Ajax
   function validateData(){
     if (weatherData.ow) {
@@ -146,25 +145,53 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   function calculateSunset(cloud, air) {
-    let displayResults = document.querySelector("#results");
+    let displayResults = document.querySelector("#percent-chance");
+    let iconResult = document.querySelector("#icon-chance");
 
     let chance = ((parseFloat(cloud) + parseFloat(air)) / 2).toFixed(2);
     console.log("Chance - " + chance);
 
     if (chance < 20) {
-      displayResults.innerHTML = "Minimal Chance - " + chance;
+      displayResults.innerHTML = "Minimal Chance - " + chance + "%";
+      iconResult.src = "./images/noclouds.png";
     } else if (chance < 40) {
-      displayResults.innerHTML = "Poor Chance - " + chance;
+      displayResults.innerHTML = "Poor Chance - " + chance + "%";
+      iconResult.src = "./images/poor.png";
     } else if (chance < 60) {
-      displayResults.innerHTML = "Good Chance - " + chance;
+      displayResults.innerHTML = "Good Chance - " + chance + "%";
+      iconResult.src = "./images/good.png";
     } else if (chance < 80) {
-      displayResults.innerHTML = "Great Chance - " + chance;
+      displayResults.innerHTML = "Great Chance - " + chance + "%";
+      iconResult.src = "./images/cloudy.png";
     } else if (chance < 100) {
-      displayResults.innerHTML = "Too many Clouds - " + chance;
+      displayResults.innerHTML = "Too many Clouds - " + chance + "%";
     } else {
-      displayResults.innerHTML = "The Air Quality Index is too high. You should stay inside - " + chance;
+      displayResults.innerHTML = "The Air Quality Index is too high. You should stay inside - " + chance + "%";
     };
 
+    let dataObj = {chance : chance, position: {lat: 40.740018 , long: -73.98974600000001}}
+    storeData(dataObj);
+
+  };
+
+  function storeData(dataObj) {
+
+    console.log(dataObj);
+
+    $.ajax({
+      url: '/data/postData',
+      type: "POST",
+      data: JSON.stringify(dataObj),
+      contentType: "application/json",
+      success: function(data) {
+        console.log('success --> data :', data);
+      },
+      error:   function(xhr, text, err) {
+        console.log('error: ',err);
+        console.log('text: ', text);
+        console.log('xhr: ',xhr);
+      }
+    });
   };
 
 });

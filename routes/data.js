@@ -25,7 +25,13 @@ router.get("/getData", getOpenWeatherData, getSunsetWXData, getDarkSkyData, getW
     {ae: res.aerisData}
   ]);
   res.redirect("/");
-})
+});
+
+router.post("/postData", (req,res) => {
+  //get hidden data
+  //send to mongo
+  redirect("/data")
+});
 
 router.get("/openweather", getOpenWeatherData, (req,res) => {
   res.json(res.openWeatherData);

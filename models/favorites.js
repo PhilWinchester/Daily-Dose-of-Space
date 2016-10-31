@@ -1,14 +1,14 @@
 const { ObjectID } = require('mongodb');
 const { getDB }    = require('../lib/dbConnect.js');
 
-function getUserPosition(req, res, next) {
+function getUserData(req, res, next) {
   // find all favorites for your userId
   getDB().then((db) => {
     db.collection('favorites')
       .find({ userId: { $eq: req.session.userId } })
       .toArray((toArrErr, data) => {
         if(toArrErr) return next(toArrErr);
-        console.log(data);
+        console.log("Data - ");
         res.userData = data;
         db.close();
         next();
@@ -80,4 +80,4 @@ function deleteFavorites(req, res, next) {
 };
 */
 
-module.exports = { getUserPosition };
+module.exports = { getUserData };

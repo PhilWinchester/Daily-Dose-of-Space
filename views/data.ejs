@@ -3,38 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>DATA ROUTE</title>
-    <link rel="stylesheet" href="/css/algorithm.css">
+    <link rel="stylesheet" href="/css/data.css">
   </head>
   <body>
     <div id="data-buttons">
       <form action="/data/openweather" method="get">
-        <input type="submit" value="Open Weather">
+        <input class="dataButton" type="submit" value="Open Weather">
       </form>
       <form action="/data/sunsetwx" method="get">
-        <input type="submit" value="SunsetWx">
+        <input class="dataButton" type="submit" value="SunsetWx">
       </form>
       <form action="/data/darksky" method="get">
-        <input type="submit"  value="Dark Sky">
+        <input class="dataButton" type="submit"  value="Dark Sky">
       </form>
       <form action="/data/weatherunderground" method="get">
-        <input type="submit"  value="Weather Underground">
+        <input class="dataButton" type="submit"  value="Weather Underground">
       </form>
       <form action="/data/sunsettime" method="get">
-        <input type="submit" value="Sunset Time">
+        <input class="dataButton" type="submit" value="Sunset Time">
       </form>
       <form action="/data/airnow" method="get">
-        <input type="submit" value="Air Now">
+        <input class="dataButton" type="submit" value="Air Now">
       </form>
       <form action="/data/forecastgov" method="get">
-        <input type="submit" value="Forecast Gov">
+        <input class="dataButton" type="submit" value="Forecast Gov">
       </form>
       <form action="/data/aeris" method="get">
-        <input type="submit" value="Aeris">
+        <input class="dataButton" type="submit" value="Aeris">
       </form>
     </div>
 
     <div id="results">
-      
+      <p id="percent-chance"></p>
+      <img id="icon-chance" src="" alt="Loading your sunset forecast">
+      <form id="postData" action="/data/postData" method="post">
+        <input id="hiddentChance" type="hidden" name="data[chance]" value="">
+        <input id="hiddentLat" type="hidden" name="data[latitude]" value="">
+        <input id="hiddentLong" type="hidden" name="data[longitude]" value="">
+        <input type="button" value="Save Result">
+      </form>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>

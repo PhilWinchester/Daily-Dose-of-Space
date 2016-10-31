@@ -1,0 +1,38 @@
+body{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+div#data-buttons{
+  position: absolute;
+  top: 0vh;
+  left: 0vw;
+  width: 100vw;
+  height: 25vh;
+  background-color: firebrick;
+
+  display: flex;
+  flex-flow: column wrap;
+
+}
+input.dataButton {
+  margin: 2vh;
+  color: forestgreen;
+  background-color: transparent;
+  border-radius: .25rem;
+  border: 1px solid dodgerblue
+}
+
+img {
+  width: 350px;
+  height: 350px;
+}
+
+div#results{
+  position: absolute;
+  top: 25vh;
+  left: 0vw;
+  width: 100vw;
+  height: 75vh;
+  background-color: dodgerblue;
+}

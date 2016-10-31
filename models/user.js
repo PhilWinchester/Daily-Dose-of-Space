@@ -14,7 +14,6 @@ function createUser(req, res, next) {
     latitude: req.body.user.latitude,
     longitude: req.body.user.longitude,
 
-
     // Store hashed password
     password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
   };

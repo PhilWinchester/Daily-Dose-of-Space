@@ -2,6 +2,9 @@
   "name": "project-2",
   "version": "1.0.0",
   "description": "### Overview",
+  "engines": {
+  "node": "6.6.0"
+  },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
