@@ -14,7 +14,6 @@ router.get("/", (req,res) => {
 });
 
 router.get("/getData", getOpenWeatherData, getSunsetWXData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, (req,res) => {
-  console.log(res.darkSkyData);
   res.json([
     {ow: res.openWeatherData},
     {sw: res.sunsetWxData},

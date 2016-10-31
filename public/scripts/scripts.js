@@ -5,12 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition((pos) => {
       console.log("in navigator");
-      document.querySelector("#location").innerHTML = `Latitude: ${pos.coords.latitude}\n Longitude: ${pos.coords.longitude}`;
+      // document.querySelector("#hidden-position").value = `${pos.coords.latitude} ${pos.coords.longitude}`;
+      document.querySelector("#hidden-latitude").value = pos.coords.latitude;
+      document.querySelector("#hidden-longitude").value =  pos.coords.longitude;
     });
   };
-
-  let d = new Date();
-  d = d.getTimezoneOffset()/60;
-  document.querySelector("#timezone").innerHTML = `UTC - ${d}`;
-
 });

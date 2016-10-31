@@ -18,7 +18,6 @@ function getSunsetWXData(req,res,next) {
   })
   .then(r => r.json())
   .then((result) => {
-    console.log("result");
     res.sunsetWxData = result;
     next();
   })

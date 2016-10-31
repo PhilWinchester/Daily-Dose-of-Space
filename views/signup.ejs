@@ -5,11 +5,15 @@
     <title>Sign up</title>
   </head>
   <body>
-    <h1>Sign up</h1>
+    <h1>sign up</h1>
     <form class="" action="/users" method="post">
         <input type="text" name="user[username]" value="" placeholder="Username">
         <input type="password" name="user[password]" value="" placeholder="Password">
+        <input id="hidden-latitude" type="hidden" name="user[latitude]" value="">
+        <input id="hidden-longitude" type="hidden" name="user[longitude]" value="">
         <input type="submit" value="Sign up">
     </form>
+
+    <script src="/scripts/scripts.js" charset="utf-8"></script>
   </body>
 </html>

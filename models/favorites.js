@@ -1,6 +1,24 @@
 const { ObjectID } = require('mongodb');
 const { getDB }    = require('../lib/dbConnect.js');
 
+function getUserPosition(req, res, next) {
+  // find all favorites for your userId
+  getDB().then((db) => {
+    db.collection('favorites')
+      .find({ userId: { $eq: req.session.userId } })
+      .toArray((toArrErr, data) => {
+        if(toArrErr) return next(toArrErr);
+        console.log(data);
+        res.userData = data;
+        db.close();
+        next();
+      });
+      return false;
+  });
+  return false;
+};
+
+/*
 // const DB_CONNECTION = 'mongodb://localhost:27017/itunescrud';
 
 function getFavorites(req, res, next) {
@@ -60,5 +78,6 @@ function deleteFavorites(req, res, next) {
   });
   return false;
 };
+*/
 
-module.exports = { getFavorites, saveFavorite, deleteFavorites };
+module.exports = { getUserPosition };
