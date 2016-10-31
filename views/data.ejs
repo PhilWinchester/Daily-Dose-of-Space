@@ -34,8 +34,8 @@
     </div>
 
     <div id="results">
-      <p id="percent-chance"></p>
-      <img id="icon-chance" src="" alt="Loading your sunset forecast">
+      <p id="percent-chance"> <%= chanceLabel %> </p>
+      <img id="icon-chance" src="<%= imgSrc %>" alt="Loading your sunset forecast">
       <form id="postData" action="/data/postData" method="post">
         <input id="hiddentChance" type="hidden" name="data[chance]" value="">
         <input id="hiddentLat" type="hidden" name="data[latitude]" value="">

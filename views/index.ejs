@@ -2,16 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>HALP</title>
+    <title>Sunset Watcher</title>
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
   </head>
   <body>
-    <h1>Welcome</h1>
-    <header>
-      <nav>
-        <a href="/signup">Sign Up</a>
-        <a href="/login">Log In</a>
-      </nav>
-    </header>
+    <div id="container">
+      <img src="<%= bgImage.urls.full %>" alt="" />
+      <header>
+        <h1>Welcome to Sunset Watcher</h1>
+        <h3>This is an application that aggregates weather information from several sources to generate the likelihood of a beautiful sunset</h3>
+        <nav>
+          <a href="/signup">Sign Up</a>
+          <a href="/login">Log In</a>
+        </nav>
+      </header>
+    </div>
   </body>
 </html>

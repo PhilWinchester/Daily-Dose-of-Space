@@ -1,10 +1,13 @@
 const express = require('express');
+const { randomUnsplashImage } = require("../services/unsplash");
 
 const indexRouter = express.Router();
 
 // This is the route that serves your '/' homepage
-indexRouter.get('/', (req, res) => {
-  res.render('index');
+indexRouter.get('/', randomUnsplashImage, (req, res) => {
+  res.render('index', {
+    bgImage: res.backgroundImage
+  });
 });
 
 // This route serves your `/login` form

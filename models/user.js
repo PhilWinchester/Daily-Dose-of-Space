@@ -48,6 +48,21 @@ function getUserById(id) {
   });
 };
 
+function getUserByIdMW(req, res, next) {
+  return getDB().then((db) => {
+    // const promise = new Promise((resolve, reject) => {
+      db.collection('users')
+        .findOne({ _id: ObjectID(req.session.userId) }, (findError, user) => {
+          if (findError) reject(findError);
+          res.user = user;
+          console.log(user);
+          db.close();
+          next();
+        });
+    });
+    // return promise;
+};
+
 function getUserByUsername(username) {
   return getDB().then((db) => {
     const promise = new Promise((resolve, reject) => {
@@ -66,4 +81,5 @@ module.exports = {
   createUser,
   getUserById,
   getUserByUsername,
+  getUserByIdMW
 };

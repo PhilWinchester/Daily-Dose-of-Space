@@ -1,36 +1,40 @@
-const router = require("express").Router();
-const { getOpenWeatherData } = require("../services/openWeather");
-const { getSunsetWXData } = require("../services/sunsetwx");
-const { getDarkSkyData } = require("../services/darksky");
-const { getWeatherUndergroundData } = require("../services/weatherUnderground");
-const { getSunsetTimeData } = require("../services/sunsetTime");
-const { getAirNowData } = require("../services/airnow");
-const { getForecastGovData } = require("../services/forecastGov");
-const { getAerisData } = require("../services/aeris");
+const router                         = require("express").Router();
+const { getUserByIdMW }              = require("../models/user");
+const { getOpenWeatherData }         = require("../services/openWeather");
+const { getSunsetWXData }            = require("../services/sunsetwx");
+const { getDarkSkyData }             = require("../services/darksky");
+const { getWeatherUndergroundData }  = require("../services/weatherUnderground");
+const { getSunsetTimeData }          = require("../services/sunsetTime");
+const { getAirNowData }              = require("../services/airnow");
+const { getForecastGovData }         = require("../services/forecastGov");
+const { getAerisData }               = require("../services/aeris");
+const { loadData, storeData }        = require("../lib/weatherAlgorithm");
 
-
-router.get("/", (req,res) => {
-  res.render("data");
+router.get("/", getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
+  res.render("data", {
+    imgSrc : res.dataObj.imgSrc,
+    chanceLabel : res.dataObj.chanceInnerHTML,
+  });
+  // res.json([
+  //   {ow: res.openWeatherData},
+  //   {sw: res.sunsetWxData},
+  //   {ds: res.darkSkyData},
+  //   {wu: res.weatherUndergroundData.hourly_forecast},
+  //   {st: res.sunsetTimeData},
+  //   {an: res.airNowData},
+  //   {fg: res.forecastGovData},
+  //   {ae: res.aerisData}
+  // ]);
 });
 
-router.get("/getData", getOpenWeatherData, getSunsetWXData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, (req,res) => {
-  res.json([
-    {ow: res.openWeatherData},
-    {sw: res.sunsetWxData},
-    {ds: res.darkSkyData},
-    {wu: res.weatherUndergroundData.hourly_forecast},
-    {st: res.sunsetTimeData},
-    {an: res.airNowData},
-    {fg: res.forecastGovData},
-    {ae: res.aerisData}
-  ]);
+router.get("/getData", (req,res) => {
   res.redirect("/");
 });
 
 router.post("/postData", (req,res) => {
   //get hidden data
   //send to mongo
-  redirect("/data")
+  res.redirect("/data")
 });
 
 router.get("/openweather", getOpenWeatherData, (req,res) => {

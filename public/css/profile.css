@@ -1,0 +1,22 @@
+body{
+  position: relative;
+  background-color: #b1bcc3
+}
+a{
+  text-decoration: none;
+  color: #503815;
+  margin: 2vw;
+}
+input[type=submit]{
+  background-color: #ff8105;
+  color: white;
+  font-size: 18px;
+
+  border-radius: .1rem;
+  padding: 2vh 1vw;
+  margin: 2vw;
+  box-shadow: 3px 3px 5px #222;
+}
+ul{
+  margin-left: -1.5vw;
+}

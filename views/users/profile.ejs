@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Profile</title>
+    <link rel="stylesheet" href="../css/profile.css" media="screen" title="no title">
   </head>
   <body>
-    <!-- Example -->
-    <h1>Welcome! <%= user.username %></h1>
-    <a href="/data">Checkout out the Weather Data</a>
+    <h1>Hey, <%= user.username %> this is your profile page</h1>
+    <a href="/data">Current prediction</a> <br>
+    <ul>Past predictions
+
+    </ul>
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">
     </form>

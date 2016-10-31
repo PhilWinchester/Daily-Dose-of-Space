@@ -23,7 +23,7 @@ usersRouter.post('/', createUser, (req, res) => {
 usersRouter.get('/profile', getUserData, authenticate, (req, res) => {
   res.render('users/profile', {
     user: res.user,
-    userData: res.userData, 
+    userData: res.userData,
   });
 });
 

@@ -1,11 +1,38 @@
+/* Color Scheme
+* #1a1913 - Black
+* #503815 - Dark Olive
+* #ac420d - Deep Orange
+* #ff8105 - Light Orange
+* #b1bcc3 - Grey blue
+*/
 body{
-  background-color: dodgerblue;
+  position: relative;
+  background-color: #b1bcc3
+}
+div#container {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+img{
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
   position: relative;
 }
 header{
   position: relative;
+  color: #b1bcc3;
+  text-shadow: 0 1px 1px #222;
+  margin: 5vw;
+  margin-top: -100vh;
 }
 nav{
+  background-color: rgba(80, 56, 21,.4);
+  padding: 5vh 5vh;
+  margin-top: 40vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -13,7 +40,7 @@ nav{
 }
 /*styling for landing page only */
 a{
-  background-color: firebrick;
+  background-color: #ac420d;
   color: white;
   text-decoration: none;
 
@@ -33,16 +60,15 @@ input[type=email], input[type=password], input[type=text] {
   margin: 2vh;
   padding: 4px 6px;
   font-size: 18px;
-  width: 30vw;
+  width: 10vw;
   transition: width 1s ease-in-out;
 }
 input[type=email]:focus, input[type=password]:focus, input[type=text]:focus {
-  width: 50vw;
+  width: 30vw;
   border: #555;
-  back
 }
 input[type=submit]{
-  background-color: firebrick;
+  background-color: #ff8105;
   color: white;
   font-size: 18px;
 
