@@ -161,7 +161,9 @@ document.addEventListener("DOMContentLoaded", () => {
       displayResults.innerHTML = "Great Chance - " + chance;
     } else if (chance < 100) {
       displayResults.innerHTML = "Too many Clouds - " + chance;
-    }
+    } else {
+      displayResults.innerHTML = "The Air Quality Index is too high. You should stay inside - " + chance;
+    };
 
   };
 
