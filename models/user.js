@@ -18,9 +18,6 @@ function createUser(req, res, next) {
     password: bcrypt.hashSync(req.body.user.password, SALTROUNDS)
   };
 
-  console.log(req.body.user.latitude);
-  console.log(req.body.user.longitude);
-
   //user ID is collection ID
   getDB().then((db) => {
     db.collection('users')
@@ -55,7 +52,7 @@ function getUserByIdMW(req, res, next) {
         .findOne({ _id: ObjectID(req.session.userId) }, (findError, user) => {
           if (findError) reject(findError);
           res.user = user;
-          console.log(user);
+          // console.log("Middlewear user - ", user);
           db.close();
           next();
         });

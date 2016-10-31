@@ -11,6 +11,7 @@ const { getAerisData }               = require("../services/aeris");
 const { loadData, storeData }        = require("../lib/weatherAlgorithm");
 
 router.get("/", getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
+  // console.log("Data root user - ", res.user);
   res.render("data", {
     imgSrc : res.dataObj.imgSrc,
     chanceLabel : res.dataObj.chanceInnerHTML,

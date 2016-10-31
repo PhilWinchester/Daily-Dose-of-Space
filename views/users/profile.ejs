@@ -8,8 +8,10 @@
   <body>
     <h1>Hey, <%= user.username %> this is your profile page</h1>
     <a href="/data">Current prediction</a> <br>
-    <ul>Past predictions
-
+    <ul>Past results
+      <% for (let i = 0; i < entries.length; i++ ) { %>
+        <li><%= entries[i].chanceInnerHTML %></li>
+      <% }; %>
     </ul>
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">

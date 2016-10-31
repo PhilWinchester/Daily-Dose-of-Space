@@ -1,8 +1,5 @@
 const fetch = require('node-fetch');
 
-const latitude = "40.740018";
-const longitude = "-73.98974600000001";
-
 //need to figure out token
 const API_URL = "https://sunburst.sunsetwx.com/v1/quality?type=sunset";
 const API_AUTHORIZATION = process.env.SUNSETWX_AUTHORIZATION;
@@ -13,7 +10,7 @@ const header = {
 
 function getSunsetWXData(req,res,next) {
   console.log("Sunsetwx Fetch");
-  fetch(`${API_URL}&coords=${longitude}%2C${latitude}`, {
+  fetch(`${API_URL}&coords=${res.user.longitude}%2C${res.user.latitude}`, {
     headers: header
   })
   .then(r => r.json())

@@ -39,8 +39,8 @@ app.listen(PORT, () => console.warn("server up and running on->", PORT));
 
 
 /*
-1 - store results in db.data with long lat
-  - get long lat to services
+1 - edit entries
+  - delete entries
 
 
 */
