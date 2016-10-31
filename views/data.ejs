@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DATA ROUTE</title>
+    <link rel="stylesheet" href="/css/algorithm.css">
+  </head>
+  <body>
+    <div id="data-buttons">
+      <form action="/data/openweather" method="get">
+        <input type="submit" value="Open Weather">
+      </form>
+      <form action="/data/sunsetwx" method="get">
+        <input type="submit" value="SunsetWx">
+      </form>
+      <form action="/data/darksky" method="get">
+        <input type="submit"  value="Dark Sky">
+      </form>
+      <form action="/data/weatherunderground" method="get">
+        <input type="submit"  value="Weather Underground">
+      </form>
+      <form action="/data/sunsettime" method="get">
+        <input type="submit" value="Sunset Time">
+      </form>
+      <form action="/data/airnow" method="get">
+        <input type="submit" value="Air Now">
+      </form>
+      <form action="/data/forecastgov" method="get">
+        <input type="submit" value="Forecast Gov">
+      </form>
+      <form action="/data/aeris" method="get">
+        <input type="submit" value="Aeris">
+      </form>
+    </div>
+
+    <div id="results">
+      
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/scripts/algorithm.js" charset="utf-8"></script>
+  </body>
+</html>
