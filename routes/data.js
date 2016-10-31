@@ -1,5 +1,6 @@
 const router                         = require("express").Router();
 const { getUserByIdMW }              = require("../models/user");
+const { deleteEntry }                = require("../models/favorites");
 const { getOpenWeatherData }         = require("../services/openWeather");
 const { getSunsetWXData }            = require("../services/sunsetwx");
 const { getDarkSkyData }             = require("../services/darksky");
@@ -30,6 +31,10 @@ router.get("/", getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyDa
 
 router.get("/getData", (req,res) => {
   res.redirect("/");
+});
+
+router.delete("/removeData/:id", deleteEntry, (req,res) => {
+  res.redirect("/users/profile")
 });
 
 router.post("/postData", (req,res) => {

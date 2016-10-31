@@ -11,6 +11,9 @@
     <ul>Past results
       <% for (let i = 0; i < entries.length; i++ ) { %>
         <li><%= entries[i].chanceInnerHTML %></li>
+        <form action="/data/removeData/<%= entries[i]._id %>?_method=DELETE" method="post">
+          <input type="submit" value="Delete">
+        </form>
       <% }; %>
     </ul>
     <form action="/auth?_method=DELETE" method="post">

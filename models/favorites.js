@@ -49,9 +49,9 @@ function getEntries(req, res, next) {
 // Delete method doesn't change because we are deleting objects from the database
 // based on that object's unique _id - you do not need to specify which user as
 // the _id is sufficient enough
-function deleteFavorites(req, res, next) {
+function deleteEntry(req, res, next) {
   getDB().then((db) => {
-    db.collection('favorites')
+    db.collection('data')
       .findAndRemove({ _id: ObjectID(req.params.id) }, (removeErr, result) => {
         if (removeErr) return next(removeErr);
         res.removed = result;
@@ -64,4 +64,4 @@ function deleteFavorites(req, res, next) {
 };
 
 
-module.exports = { getEntries };
+module.exports = { getEntries, deleteEntry };
