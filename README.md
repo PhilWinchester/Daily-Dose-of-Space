@@ -1,6 +1,7 @@
 #Instagram Hit Algorithm
+##aka Sunset Watcher
 
-A simple web app that will tell you whether you need to get your filters out or not.
+A simple web app that will tell you whether your current location should expect an extra special sunset or not.
 
 Implementation:
 Taking data from several weather api's, this app will average out the values and calculate the likelihood of a special sunset in your area. These are two simple inputs, but give a base layer of data to inform the user if there will be a special sunset or not. Getting the user location with HTML5 geolaction and their sunset time with http://sunrise-sunset.org/api, will filter the data and allow the user to determine if the results are accurate or not.
