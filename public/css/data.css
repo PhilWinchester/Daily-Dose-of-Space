@@ -10,7 +10,7 @@ div#data-buttons{
   flex-flow: row wrap;
 }
 div.card{
-  background-color: #ff8105;
+  /*background-color: rgb(245,245,245);*/
   box-shadow: 0 8px 16px 0 rgba(125,125,125,0.2);
   transition: 0.3s;
   width: 20vw;
@@ -96,7 +96,7 @@ input[type=submit]#home-button{
   border-radius: .1rem;
   padding: 2vh 1vw;
   margin: 1vw;
-  box-shadow: 3px 3px 5px #222;
+  box-shadow: 0 4px 8px 0 #222;
 }
 p#percent-chance{
   left: 0;
@@ -110,5 +110,5 @@ p#percent-chance{
 
   border-radius: .1rem;
   padding: 2vh 1vw;
-  box-shadow: 3px 3px 5px #222;
+  box-shadow: 0 4px 8px 0 #222;
 }
