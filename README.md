@@ -1,7 +1,7 @@
 #Instagram Hit Algorithm
 ##aka Sunset Watcher
 
-![alt text](http://i.imgur.com/RVeHiVj.gifv "Logo Title Text 1")
+![alt text](http://i.imgur.com/RVeHiVj.gifv)
 
 A simple web app that will tell you whether your current location should expect an extra special sunset or not.
 
