@@ -1,6 +1,8 @@
 #Instagram Hit Algorithm
 ##aka Sunset Watcher
 
+!(http://i.imgur.com/RVeHiVj.gifv)
+
 A simple web app that will tell you whether your current location should expect an extra special sunset or not.
 
 ##User Story
@@ -53,7 +55,7 @@ Using 7 weather API's the application averages out several different values to c
     8. Weather Underground
 
 ##Assistance from
-1. GA instructions @gittheking @jasonseminara @trevorpreston @rapala61 @irwintsay for helping troubleshoot
+1. GA instructors @gittheking @jasonseminara @trevorpreston @rapala61 @irwintsay for helping troubleshoot
  1. User authentication was supplied and demo'd to us from instructors. Minor editing was done to tailor the user authentication for this application, but the groundwork came from the instructors.
 2. Sunset Wx Team for allowing me access to their API and being the inspiration for this project.
 
