@@ -36,9 +36,3 @@ app.use("/users", usersRoutes);
 app.use("/data", dataRoutes);
 
 app.listen(PORT, () => console.warn("server up and running on->", PORT));
-
-/*
-1 - put stuff
-
-
-*/

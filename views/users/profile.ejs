@@ -8,17 +8,19 @@
   <body>
     <h1>Hey, <%= user.username %> this is your profile page</h1>
     <a href="/data">Current prediction</a> <br>
-    <p id="label">
-      Past Results
-    </p>
+    <p id="label">Past Results</p>
     <div id="results">
       <% for (let i = 0; i < entries.length; i++ ) { %>
         <div class="card">
           <img class="weather-icon" src="../<%= entries[i].imgSrc %>" alt="" />
           <div class="container">
             <p><%= entries[i].chanceInnerHTML %></p>
+            <p>Your Rating: <%= entries[i].rating %></p>
             <form action="/data/removeData/<%= entries[i]._id %>?_method=DELETE" method="post">
-              <input type="submit" value="Delete">
+              <input class="data-button" type="submit" value="Delete">
+            </form>
+            <form class="" action="/data/editEntry/<%= entries[i]._id %>?_method=PUT" method="get">
+              <input type="submit" name="name" value="Rate Sunset">
             </form>
           </div>
         </div>

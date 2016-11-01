@@ -1,7 +1,7 @@
 const router                         = require("express").Router();
 
 const { getUserByIdMW }              = require("../models/user");
-const { deleteEntry }                = require("../models/favorites");
+const { deleteEntry, updateEntry, getEntry }                = require("../models/favorites");
 const { getSunsetToken }             = require("../models/user");
 
 const { getOpenWeatherData }         = require("../services/openWeather");
@@ -26,6 +26,14 @@ router.get("/", getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyDa
 //initial implementation used /data/getData and I couldn't fully remove error from this so this path covers that error
 router.get("/getData", (req,res) => {
   res.redirect("/");
+});
+
+router.get("/editEntry/:id", getEntry,  (req,res) => {
+  res.render("rate", { sunset : res.sunset })
+});
+
+router.put("/updateEntry/:id", updateEntry, (req,res) => {
+  res.redirect("/users/profile")
 });
 
 router.delete("/removeData/:id", deleteEntry, (req,res) => {

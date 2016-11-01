@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rate the Sunset</title>
+    <link rel="stylesheet" href="/css/rate.css" media="screen" title="no title">
+  </head>
+  <body>
+    <%# sunset.imgSrc %>
+    <img src="<%= sunset.imgSrc.slice(1) %>" alt="" />
+    <form class="edit" action="/data/updateEntry/<%= sunset._id %>?_method=PUT" method="POST">
+      <input type="text" name="sunset[rating]" value="<%= sunset.rating %>">
+      <input type="submit" value="Update">
+    </form>
+  </body>
+</html>

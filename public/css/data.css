@@ -11,8 +11,8 @@ div.card{
   background-color: #ff8105;
   box-shadow: 0 8px 16px 0 rgba(125,125,125,0.2);
   transition: 0.3s;
-  width: 15vw;
-  margin: 3vw;
+  width: 20vw;
+  margin: 1vw;
   position: relative;
 }
 div.card:hover {
@@ -28,15 +28,13 @@ div.container {
 }
 input.dataButton {
   margin: 2vh;
-  color: forestgreen;
-  background-color: transparent;
   border-radius: .25rem;
-  border: 1px solid dodgerblue
+  border: 1px solid dodgerblue;
+  color: forestgreen;
 }
 img{
   position: relative;
 }
-
 img#openweather{
   width: 100%;
   height: 75%;
