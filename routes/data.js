@@ -15,6 +15,7 @@ const { getAerisData }               = require("../services/aeris");
 
 const { loadData, storeData }        = require("../lib/weatherAlgorithm");
 
+//Main data route - gets userID and then using that will API Fetch with their Long/Lat and then load/store data from those fetches. Displaying them on data.ejs
 router.get("/", getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
   res.render("data", {
     imgSrc : res.dataObj.imgSrc,
@@ -22,6 +23,7 @@ router.get("/", getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyDa
   });
 });
 
+//initial implementation used /data/getData and I couldn't fully remove error from this so this path covers that error
 router.get("/getData", (req,res) => {
   res.redirect("/");
 });
@@ -34,6 +36,7 @@ router.post("/postData", (req,res) => {
   res.redirect("/data")
 });
 
+//Each API's individual route
 router.get("/openweather", getOpenWeatherData, (req,res) => {
   res.json(res.openWeatherData);
 });

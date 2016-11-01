@@ -24,6 +24,7 @@ The user will first be prompted with creating a new account or logging into an e
 
 ##Implementation
 Using 7 weather API's the application averages out several different values to create a simple heuristic value for cloud coverage and air quality. These two values are calculated from weighted inputs from each API and then averaged to create the percent chance of a sunset.
+- At this stage the sunset is simply calculated from cloud coverage percentage and air quality index
 
 ##Soon to be released features
  1. Use SunsetWx data as validation

@@ -71,10 +71,6 @@ function getUserByIdMW(req, res, next) {
     });
 };
 
-function generateSunsetToken(req,res,next) {
-
-}
-
 module.exports = {
   createUser,
   getUserById,
