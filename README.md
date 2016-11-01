@@ -3,15 +3,56 @@
 
 A simple web app that will tell you whether your current location should expect an extra special sunset or not.
 
-Implementation:
-Taking data from several weather api's, this app will average out the values and calculate the likelihood of a special sunset in your area. These are two simple inputs, but give a base layer of data to inform the user if there will be a special sunset or not. Getting the user location with HTML5 geolaction and their sunset time with http://sunrise-sunset.org/api, will filter the data and allow the user to determine if the results are accurate or not.
+##User Story
+ - A user will be able to create an account that will be tied to their initial location.
+ - Look up the current expectation for the sunset at their location
+ - Store that entry, tied to their userId, to a collection that can be viewed whenever
 
-User Story:
-A user will have a simple login page that will log them in, or register them. The main page is a simple icon display that will inform the user about their sunset likelihood. Finally the last page allows the user to select how the sunset actually is, and will give feedback on how accurate the algorithm is.
+##Use Case
+The user will first be prompted with creating a new account or logging into an existing one. Next they will be taken to their profile page, which will have all previous lookups they have done. From their they can remove old entries or look up current sunset expectations. At the results page the user can look up each data set to see what fed into the result.
 
-Inspiration:
+##Approach
+1. Set up MVC
+2. Set up simple server with data routes
+3. Research and setup API's
+4. Setup each API fetch
+5. Make data routes to display json response
+6. Set up weatherAlgorithm to parse data
+7. Render a specific response to data results page
+8. Front end refining
+9. CSS Styling
+
+##Implementation
+Using 7 weather API's the application averages out several different values to create a simple heuristic value for cloud coverage and air quality. These two values are calculated from weighted inputs from each API and then averaged to create the percent chance of a sunset.
+
+##Soon to be released features
+ 1. Use SunsetWx data as validation
+ 2. Dates tied to entries
+ 3. Show user how long till next expected sunset
+ 5. Allow user to edit their default location
+  1. Enter different Longitude and Latitude.
+  2. Use Google Maps API to have user click on location.
+  3. Have user search by city, town, or county.
+ 5. Have each data set be a customized page so user can inspect various weather API's
+  1. Have input value from each API displayed on results page
+
+##Technologies Used
+ 1. Express
+ 2. Javascripts, HTML, CSS
+ 3. API's
+    1. Aeris
+    2. Air Now
+    3. Dark Sky
+    4. Forecast Gov
+    5. Open Weather
+    6. Sunset Time
+    7. Sunset Wx
+    8. Weather Underground
+
+##Assistance from
+1. GA instructions @gittheking @jasonseminara @trevorpreston @rapala61 @irwintsay for helping troubleshoot
+ 1. User authentication was supplied and demo'd to us from instructors. Minor editing was done to tailor the user authentication for this application, but the groundwork came from the instructors.
+2. Sunset Wx Team for allowing me access to their API and being the inspiration for this project.
+
+#Inspiration:
 This is a slimmed down implementation of https://sunsetwx.com/ and is scaled for mobile use and simple user interaction.
-
-Difficulties:
-NOAA data is rather complicated and I don't know how to query for the data I want and when I can get data back I don't know what it means.
- - http://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GHCND&locationid=ZIP:28801&startdate=2016-10-25&enddate=2016-10-26 queries zipcode 28801 from yesterday till today. However, if I switch to zipcode 10025 then I get no results back. Is that because there is no data for that zip or because I broke it?
