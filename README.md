@@ -1,7 +1,7 @@
 #Instagram Hit Algorithm
 ##aka Sunset Watcher
 
-![](http://i.imgur.com/RVeHiVj.gifv)
+https://sunset-calculator.herokuapp.com/
 
 A simple web app that will tell you whether your current location should expect an extra special sunset or not.
 
