@@ -8,14 +8,22 @@
   <body>
     <h1>Hey, <%= user.username %> this is your profile page</h1>
     <a href="/data">Current prediction</a> <br>
-    <ul>Past results
+    <p id="label">
+      Past Results
+    </p>
+    <div id="results">
       <% for (let i = 0; i < entries.length; i++ ) { %>
-        <li><%= entries[i].chanceInnerHTML %></li>
-        <form action="/data/removeData/<%= entries[i]._id %>?_method=DELETE" method="post">
-          <input type="submit" value="Delete">
-        </form>
+        <div class="card">
+          <img class="weather-icon" src="../<%= entries[i].imgSrc %>" alt="" />
+          <div class="container">
+            <p><%= entries[i].chanceInnerHTML %></p>
+            <form action="/data/removeData/<%= entries[i]._id %>?_method=DELETE" method="post">
+              <input type="submit" value="Delete">
+            </form>
+          </div>
+        </div>
       <% }; %>
-    </ul>
+    </div>
     <form action="/auth?_method=DELETE" method="post">
       <input type="submit" value="Logout">
     </form>

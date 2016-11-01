@@ -3,18 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Sign up</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/signup.css">
   </head>
   <body>
-    <h1>sign up</h1>
-    <form class="" action="/users" method="post">
-        <input type="text" name="user[username]" value="" placeholder="Username"> <br>
-        <input type="password" name="user[password]" value="" placeholder="Password"> <br>
-        <input type="email" name="user[email]" value="" placeholder="Email"> <br>
-        <input id="hidden-latitude" type="hidden" name="user[latitude]" value="">
-        <input id="hidden-longitude" type="hidden" name="user[longitude]" value="">
-        <input type="submit" value="Sign up">
-    </form>
+    <div class="card">
+      <h1>Sign Up</h1>
+      <img id="signup-icon" src="/images/great.png" alt="" />
+      <div class="container">
+        <form class="" action="/users" method="post">
+            <input type="text" name="user[username]" value="" placeholder="Username"> <br>
+            <input type="password" name="user[password]" value="" placeholder="Password"> <br>
+            <input type="email" name="user[email]" value="" placeholder="Email"> <br>
+            <input id="hidden-latitude" type="hidden" name="user[latitude]" value="">
+            <input id="hidden-longitude" type="hidden" name="user[longitude]" value="">
+            <h3>Getting Location. Please Wait</h3>
+            <input id="create-button" type="submit" value="Sign up">
+        </form>
+      </div>
+    </div>
 
     <script src="/scripts/scripts.js" charset="utf-8"></script>
   </body>

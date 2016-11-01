@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/login.css">
   </head>
   <body>
-    <h1>Login</h1>
-    <form class="" action="/auth" method="post">
-        <input type="text" name="user[username]" value="" placeholder="Username"> <br>
-        <input type="password" name="user[password]" value="" placeholder="Password"> <br>
-        <input type="submit" name="name" value="Log in">
-    </form>
+    <div class="card">
+      <h1>Login</h1>
+      <img id="login-icon" src="images/great.png" alt="" />
+      <div class="container">
+        <form class="" action="/auth" method="post">
+            <input type="text" name="user[username]" value="" placeholder="Username"> <br>
+            <input type="password" name="user[password]" value="" placeholder="Password"> <br>
+            <input type="submit" name="name" value="Log in">
+        </form>
+      </div>
+    </div>
   </body>
 </html>

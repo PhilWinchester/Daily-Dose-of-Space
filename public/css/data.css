@@ -1,19 +1,30 @@
 body{
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  display: block;
+  /*background-color: #b1bcc3;*/
 }
 div#data-buttons{
-  position: absolute;
-  top: 0vh;
-  left: 0vw;
-  width: 100vw;
-  height: 25vh;
-  background-color: firebrick;
-
   display: flex;
-  flex-flow: column wrap;
-
+  flex-flow: row wrap;
+}
+div.card{
+  background-color: #ff8105;
+  box-shadow: 0 8px 16px 0 rgba(125,125,125,0.2);
+  transition: 0.3s;
+  width: 15vw;
+  margin: 3vw;
+  position: relative;
+}
+div.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+div.container {
+  background-color: rgb(255,255,255);
+  padding: 2px 16px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
 }
 input.dataButton {
   margin: 2vh;
@@ -22,17 +33,82 @@ input.dataButton {
   border-radius: .25rem;
   border: 1px solid dodgerblue
 }
-
-img {
-  width: 350px;
-  height: 350px;
+img{
+  position: relative;
 }
 
+img#openweather{
+  width: 100%;
+  height: 75%;
+}
+img#sunsetwx{
+  width: 100%;
+  height: 50px;
+}
+img#darksky{
+  width: 100%;
+  height: 150px;
+}
+img#weatherunderground{
+  width: 100%;
+  height: 100px;
+}
+img#sunset{
+  width: 100%;
+  height: 150px;
+}
+img#aqi{
+  width: 100%;
+  height: 100px;
+}
+img#noaa{
+  width: 100%;
+  height: 150px;
+}
+img#aeris{
+  width: 100%;
+  height: 50px;
+}
 div#results{
-  position: absolute;
-  top: 25vh;
-  left: 0vw;
   width: 100vw;
-  height: 75vh;
+  height: 25vh;
   background-color: dodgerblue;
+  position: relative;
+}
+img#icon-chance {
+  margin-right: 10vw;
+  float: right;
+  width: 20%;
+  height: 100%;
+}
+form#home-form{
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  margin: 2vw;
+
+}
+input[type=submit]#home-button{
+  background-color: #ac420d;
+  color: white;
+  font-size: 18px;
+
+  border-radius: .1rem;
+  padding: 2vh 1vw;
+  margin: 2vw;
+  box-shadow: 3px 3px 5px #222;
+}
+p#percent-chance{
+  left: 0;
+  top: 0;
+  position: absolute;
+  margin: 2vw;
+
+  background-color: #ac420d;
+  color: white;
+  font-size: 18px;
+
+  border-radius: .1rem;
+  padding: 2vh 1vw;
+  box-shadow: 3px 3px 5px #222;
 }
