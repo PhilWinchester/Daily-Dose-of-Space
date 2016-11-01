@@ -4,6 +4,8 @@ body{
   /*background-color: #b1bcc3;*/
 }
 div#data-buttons{
+  width: 100vw;
+  min-height: 50vh;
   display: flex;
   flex-flow: row wrap;
 }
@@ -37,35 +39,35 @@ img{
 }
 img#openweather{
   width: 100%;
-  height: 75%;
+  height: 76%;
 }
 img#sunsetwx{
   width: 100%;
-  height: 50px;
+  height: 25%;
 }
 img#darksky{
   width: 100%;
-  height: 150px;
+  height: 76%;
 }
 img#weatherunderground{
   width: 100%;
-  height: 100px;
+  height: 50%;
 }
 img#sunset{
   width: 100%;
-  height: 150px;
+  height: 73%;
 }
 img#aqi{
   width: 100%;
-  height: 100px;
+  height: 73%;
 }
 img#noaa{
   width: 100%;
-  height: 150px;
+  height: 73%;
 }
 img#aeris{
   width: 100%;
-  height: 50px;
+  height: 25%;
 }
 div#results{
   width: 100vw;
@@ -93,14 +95,14 @@ input[type=submit]#home-button{
 
   border-radius: .1rem;
   padding: 2vh 1vw;
-  margin: 2vw;
+  margin: 1vw;
   box-shadow: 3px 3px 5px #222;
 }
 p#percent-chance{
   left: 0;
   top: 0;
   position: absolute;
-  margin: 2vw;
+  margin: 1vw;
 
   background-color: #ac420d;
   color: white;

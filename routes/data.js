@@ -17,6 +17,7 @@ const { loadData, storeData }        = require("../lib/weatherAlgorithm");
 
 //Main data route - gets userID and then using that will API Fetch with their Long/Lat and then load/store data from those fetches. Displaying them on data.ejs
 router.get("/", getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
+  console.log(res.user);
   res.render("data", {
     imgSrc : res.dataObj.imgSrc,
     chanceLabel : res.dataObj.chanceInnerHTML,

@@ -65,23 +65,5 @@ function updateEntry(req,res,next) {
   return false;
 };
 
-// function editMovie(req, res, next) {
-//   MongoClient.connect(dbConnection, (err, db) => {
-//     if (err) return next(err);
-//
-//     db.collection('movies')
-//       .findAndModify({ _id: ObjectID(req.params.id) }, [] /* sort */,
-//       { $set: req.body.movie }, { new: true } /* options */, (updateError, doc) => {
-//         if (updateError) return next(updateError);
-//
-//         // return the data
-//         res.updated = doc;
-//         db.close();
-//         return next();
-//       });
-//     return false;
-//   });
-//   return false;
-// }
 
 module.exports = { getEntries, deleteEntry, updateEntry, getEntry };

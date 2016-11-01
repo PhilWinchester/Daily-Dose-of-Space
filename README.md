@@ -36,6 +36,8 @@ Using 7 weather API's the application averages out several different values to c
   3. Have user search by city, town, or county.
  5. Have each data set be a customized page so user can inspect various weather API's
   1. Have input value from each API displayed on results page
+ 6. Average Sunset over time at location
+ 7. Add Key to explain icons/value importance
 
 ##Technologies Used
  1. Express
