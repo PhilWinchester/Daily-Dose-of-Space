@@ -5,7 +5,9 @@ body{
 }
 div#data-buttons{
   width: 100vw;
-  min-height: 50vh;
+  height: 25vh;
+  position: absolute;
+  top: 80vh;
   display: flex;
   flex-flow: row wrap;
 }
@@ -13,61 +15,81 @@ div.card{
   /*background-color: rgb(245,245,245);*/
   box-shadow: 0 8px 16px 0 rgba(125,125,125,0.2);
   transition: 0.3s;
-  width: 20vw;
+  width: 10vw;
+  height: 15vh;
   margin: 1vw;
   position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 div.card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-div.container {
-  background-color: rgb(255,255,255);
-  padding: 2px 16px;
-  left: 0;
-  bottom: 0;
+form{
+  /*position: ;*/
   width: 100%;
-  position: absolute;
-}
-input.dataButton {
-  margin: 2vh;
-  border-radius: .25rem;
-  border: 1px solid dodgerblue;
-  color: forestgreen;
+  height: 100%;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 img{
   position: relative;
 }
-img#openweather{
-  width: 100%;
-  height: 76%;
+input[type=submit]{
+  position: relative;
+  border: solid 0px #000;
 }
-img#sunsetwx{
+input[type=submit]#openweather{
+  background-image: url("/images/openweather.png");
+  background-size: cover;
   width: 100%;
-  height: 25%;
+  height: 100%;
 }
-img#darksky{
+input[type=submit]#sunsetwx{
+  background-image: url("/images/sunsetwx.png");
+  background-size: cover;
   width: 100%;
-  height: 76%;
+  height: 100%;
 }
-img#weatherunderground{
+input[type=submit]#darksky{
+  background-image: url("/images/darksky.png");
+  background-size: cover;
   width: 100%;
-  height: 50%;
+  height: 100%;
 }
-img#sunset{
+input[type=submit]#weatherunderground{
+  background-image: url("/images/weatherunderground.png");
+  background-size: cover;
   width: 100%;
-  height: 73%;
+  height: 100%;
 }
-img#aqi{
+input[type=submit]#sunset{
+  background-image: url("/images/sunset.png");
+  background-size: cover;
   width: 100%;
-  height: 73%;
+  height: 100%;
 }
-img#noaa{
+input[type=submit]#aqi{
+  background-image: url("/images/aqi.png");
+  background-size: cover;
   width: 100%;
-  height: 73%;
+  height: 100%;
 }
-img#aeris{
+input[type=submit]#noaa{
+  background-image: url("/images/noaa.png");
+  background-size: cover;
   width: 100%;
-  height: 25%;
+  height: 100%;
+}
+input[type=submit]#aeris{
+  background-image: url("/images/aeris.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 div#results{
   width: 50vw;
@@ -83,8 +105,8 @@ img#icon-chance {
   height: 100%;
 }
 form#home-form{
-  left: 0;
-  bottom: 0;
+  left: -2vw;
+  top: 50%;
   position: absolute;
   margin: 2vw;
 }
@@ -96,7 +118,7 @@ input[type=submit]#home-button{
   border-radius: .1rem;
   padding: 2vh 1vw;
   margin: 1vw;
-  box-shadow: 0 4px 8px 0 #222;
+  box-shadow: 0 4px 4px 0 #222;
 }
 p#percent-chance{
   left: 0;
@@ -110,5 +132,5 @@ p#percent-chance{
 
   border-radius: .1rem;
   padding: 2vh 1vw;
-  box-shadow: 0 4px 8px 0 #222;
+  box-shadow: 0 4px 4px 0 #222;
 }

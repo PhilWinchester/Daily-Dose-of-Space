@@ -3,82 +3,59 @@
   <head>
     <meta charset="utf-8">
     <title>DATA ROUTE</title>
+    <link rel="icon" href="/images/favicon.ico" media="screen" title="no title">
     <link rel="stylesheet" href="/css/data.css">
   </head>
   <body>
-    <div id="data-buttons">
-      <div class="card">
-        <img id="openweather" src="images/openweather.png" alt="" />
-        <div class="container">
-          <form action="/data/openweather" method="get">
-            <input class="dataButton" type="submit" value="Open Weather">
-          </form>
-        </div>
-      </div>
-      <div class="card">
-        <img id="sunsetwx" src="images/sunsetwx.png" alt="" />
-        <div class="container">
-          <form action="/data/sunsetwx" method="get">
-            <input class="dataButton" type="submit" value="SunsetWx">
-          </form>
-        </div>
-      </div>
-      <div class="card">
-        <img id="darksky" src="images/darksky.png" alt="" />
-        <div class="container">
-          <form action="/data/darksky" method="get">
-            <input class="dataButton" type="submit"  value="Dark Sky">
-          </form>
-        </div>
-      </div>
-      <div class="card">
-        <img id="weatherunderground" src="images/weatherunderground.png" alt="" />
-        <div class="container">
-          <form action="/data/weatherunderground" method="get">
-            <input class="dataButton" type="submit"  value="Weather Underground">
-          </form>
-        </div>
-      </div>
-      <div class="card">
-        <img id="sunset" src="images/sunset.png" alt="" />
-        <div class="container">
-          <form action="/data/sunsettime" method="get">
-            <input class="dataButton" type="submit" value="Sunset Time">
-          </form>
-        </div>
-      </div>
-      <div class="card">
-        <img id="aqi" src="images/aqi.png" alt="" />
-        <div class="container">
-          <form action="/data/airnow" method="get">
-            <input class="dataButton" type="submit" value="Air Now">
-          </form>
-        </div>
-      </div>
-      <div class="card">
-        <img id="noaa" src="images/noaa.png" alt="" />
-        <div class="container">
-          <form action="/data/forecastgov" method="get">
-            <input class="dataButton" type="submit" value="Forecast Gov">
-          </form>
-        </div>
-      </div>
-      <div class="card">
-        <img id="aeris" src="images/aeris.png" alt="" />
-        <div class="container">
-          <form action="/data/aeris" method="get">
-            <input class="dataButton" type="submit" value="Aeris">
-          </form>
-        </div>
-        </div>
-    </div>
-
     <div id="results">
       <p id="percent-chance"> <%= chanceLabel %> </p>
       <img id="icon-chance" src="<%= imgSrc %>" alt="Loading your sunset forecast"/>
       <form id="home-form" action="/users/profile" method="GET">
         <input id="home-button"type="submit" name="" value="Home">
       </form>
+    </div>
+
+    <div id="data-buttons">
+      <div class="card">
+        <form action="/data/openweather" method="get">
+          <input type="submit" id="openweather" value="">
+        </form>
+      </div>
+      <div class="card">
+        <form action="/data/sunsetwx" method="get">
+          <input type="submit" id="sunsetwx" value="">
+        </form>
+      </div>
+      <div class="card">
+        <form action="/data/darksky" method="get">
+          <input type="submit" id="darksky" value="">
+        </form>
+      </div>
+      <div class="card">
+        <form action="/data/weatherunderground" method="get">
+          <input type="submit" id="weatherunderground" value="">
+        </form>
+      </div>
+      <div class="card">
+        <form action="/data/sunsettime" method="get">
+          <input type="submit" id="sunset" value="">
+        </form>
+      </div>
+      <div class="card">
+        <form action="/data/airnow" method="get">
+          <input type="submit" id="aqi" value="">
+        </form>
+      </div>
+      <div class="card">
+        <form action="/data/forecastgov" method="get">
+          <input id="noaa" type="submit" value="">
+        </form>
+      </div>
+      <div class="card">
+        <form action="/data/aeris" method="get">
+          <input id="aeris" type="submit" value="">
+        </form>
+      </div>
     </div>
   </body>
 </html>

@@ -61,3 +61,6 @@ Using 7 weather API's the application averages out several different values to c
 
 #Inspiration:
 This is a slimmed down implementation of https://sunsetwx.com/ and is scaled for mobile use and simple user interaction.
+
+##Credit
+ - Favicon: http://www.favicon.cc/?action=icon&file_id=623371

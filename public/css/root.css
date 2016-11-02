@@ -46,11 +46,18 @@ a{
   border-radius: .1rem;
   padding: 4vh 2vw;
   margin: 2vw;
-  box-shadow: 3px 3px 5px #222;
+  box-shadow: 0 2px 2px 0 #222;
 }
 a:hover{
-  box-shadow: 4px 4px 5px #222;
+  box-shadow: 1px 4px 4px 1px #222;
 }
 a:active{
-  box-shadow: 3px 3px 5px #222;
+  box-shadow: 0 2px 2px 0 #222;
+}
+/*Styling for Development Notes*/
+h4{
+  margin-left: 2vw;
+}
+h5{
+  margin-left: 4vw;
 }
