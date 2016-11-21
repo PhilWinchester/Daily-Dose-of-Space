@@ -1,4 +1,9 @@
-const fetch = require('node-fetch');
+const fetch     = require('node-fetch');
+const SunsetWx  = require('node-sunsetwx');
+
+let 
+
+console.log(sunsetwx.login);
 
 //need to figure out token
 const API_URL = "https://sunburst.sunsetwx.com/v1/quality?type=sunset";
