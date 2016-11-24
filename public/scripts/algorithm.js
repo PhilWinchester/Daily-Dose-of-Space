@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       evalOpenWeatherData(weatherData.ow);
     };
     if (weatherData.sw) {
-      console.log(weatherData.sw);
+      console.log('weatherData.sw');
     };
     if (weatherData.ds) {
       evalDarkSkyData(weatherData.ds);
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   function heuristicVals(){
-    console.log(weightedData);
+    // console.log(weightedData);
 
     let sunsetVal = 0;
     for (key in weightedData) {
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function storeData(dataObj) {
 
-    console.log(dataObj);
+    // console.log(dataObj);
 
     $.ajax({
       url: '/data/postData',
