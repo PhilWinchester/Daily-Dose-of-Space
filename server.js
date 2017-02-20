@@ -14,7 +14,7 @@ const dataRoutes           = require("./routes/data");
 
 const app                  = express();
 const SECRET               = "sunset3000";
-const PORT                 = process.argv[2] || process.env.PORT || 3001;
+const PORT                 = process.argv[2] || process.env.PORT || 3000;
 
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname,'public')));

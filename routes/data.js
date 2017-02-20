@@ -1,22 +1,22 @@
-const router                         = require("express").Router();
+const router                            = require("express").Router();
 
-const { getUserByIdMW }              = require("../models/user");
-const { deleteEntry, updateEntry, getEntry }                = require("../models/favorites");
-const { getSunsetToken }             = require("../models/user");
+const { getUserByIdMW }                 = require("../models/user");
+const { deleteEntry, updateEntry, getEntry } = require("../models/favorites");
+const { getSunsetToken }                = require("../models/user");
 
-const { getOpenWeatherData }         = require("../services/openWeather");
-const { getSunsetWXData }            = require("../services/sunsetwx");
-const { getDarkSkyData }             = require("../services/darksky");
-const { getWeatherUndergroundData }  = require("../services/weatherUnderground");
-const { getSunsetTimeData }          = require("../services/sunsetTime");
-const { getAirNowData }              = require("../services/airnow");
-const { getForecastGovData }         = require("../services/forecastGov");
-const { getAerisData }               = require("../services/aeris");
+const { getOpenWeatherData }            = require("../services/openWeather");
+const { sunsewxLogin, getSunsetWXData } = require("../services/sunsetwx");
+const { getDarkSkyData }                = require("../services/darksky");
+const { getWeatherUndergroundData }     = require("../services/weatherUnderground");
+const { getSunsetTimeData }             = require("../services/sunsetTime");
+const { getAirNowData }                 = require("../services/airnow");
+const { getForecastGovData }            = require("../services/forecastGov");
+const { getAerisData }                  = require("../services/aeris");
 
-const { loadData, storeData }        = require("../lib/weatherAlgorithm");
+const { loadData, storeData }           = require("../lib/weatherAlgorithm");
 
 //Main data route - gets userID and then using that will API Fetch with their Long/Lat and then load/store data from those fetches. Displaying them on data.ejs
-router.get("/", getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
+router.get("/", sunsewxLogin, getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
   console.log(res.user);
   res.render("data", {
     imgSrc : res.dataObj.imgSrc,
