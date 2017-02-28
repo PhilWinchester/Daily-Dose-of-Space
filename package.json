@@ -1,18 +1,18 @@
 {
-  "name": "project-2",
-  "version": "1.0.0",
-  "description": "### Overview",
+  "name": "Sunset Calculator",
+  "version": "2.0.0",
+  "description": "Single page app to calculate the quality of your local sunset",
   "engines": {
-  "node": "6.6.0"
+    "node": "6.6.0"
   },
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@git.generalassemb.ly:Pwinchester/project-2.git"
+    "url": "https://github.com/PhilWinchester/Sunset-Watcher"
   },
   "author": "Phil Winchester",
   "license": "ISC",
@@ -25,11 +25,13 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-session": "^1.14.1",
+    "express-vue": "^3.7.2",
     "method-override": "^2.3.6",
     "mongodb": "^2.2.11",
     "morgan": "^1.7.0",
     "node-fetch": "^1.6.3",
     "node-sunsetwx": "0.0.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "vue": "^2.2.1"
   }
 }
