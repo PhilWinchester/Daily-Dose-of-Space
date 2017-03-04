@@ -3,13 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>Sunset Calculator</title>
+    <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <h1>Welcome to Sunset Thingy</h1>
-    <div class="clicky">
-      <h2>click me</h2>
+    <div class="header">
+      <div id="menu">
+        <a href="#prediction-container">Prediction</a>
+        <a href="#weather-contaier">Weather</a>
+        <a href="#data-contaier">Data</a>
+      </div>
+      <div id="banner">
+        <h1>Welcome to Sunset Thingy</h1>
+      </div>
+      <div id="locator">
+        <div id="geo-location">
+          <input type="text" name="" value="zip code">
+          <input type="text" name="" value="city, state">
+          <input type="text" name="" value="latitude">
+          <input type="text" name="" value="longitude">
+        </div>
+      </div>
     </div>
+
+    <div class="prediction-container" id="prediction-container">
+      <div class="cloud-data">
+        <h2>cloud data</h2>
+      </div>
+      <div class="air-data">
+        <h2>air data</h2>
+      </div>
+      <div class="rain-data">
+        <h2>rain data</h2>
+      </div>
+    </div>
+
+    <div class="weather-contaier" id="weather-contaier">
+      <h2>general weather or something more interesting will go here</h2>
+    </div>
+
+    <div class="data-contaier" id="data-contaier">
+      <h2>Data sources and their raw values will go here</h2>
+    </div>
+
+    <div class="footer">
+      <h2>This will be the footer</h2>
+    </div>
+
+
     <script src="./scripts.js" charset="utf-8"></script>
   </body>
 </html>
