@@ -1,5 +1,5 @@
 (() => {
-
+  getBrowserLocation();
 
   document.querySelector('.clicky').addEventListener('click', () => {
     // fetch('/data')

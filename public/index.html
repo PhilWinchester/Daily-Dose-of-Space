@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Sunset Calculator</title>
     <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
     <div class="header">
@@ -20,8 +20,8 @@
         <div id="geo-location">
           <input type="text" name="" value="zip code">
           <input type="text" name="" value="city, state">
-          <input type="text" name="" value="latitude">
-          <input type="text" name="" value="longitude">
+          <input type="text" id="latitude-input" value="latitude">
+          <input type="text" id="longitude-input" value="longitude">
         </div>
       </div>
     </div>
@@ -51,6 +51,7 @@
     </div>
 
 
-    <script src="./scripts.js" charset="utf-8"></script>
+    <script src="./scripts/locatorScript.js" charset="utf-8"></script>
+    <script src="./scripts/scriptsHandler.js" charset="utf-8"></script>
   </body>
 </html>
