@@ -18,7 +18,7 @@ function getBrowserLocation() {
 
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition((pos) => {
-      console.log(pos.coords);
+      // console.log(pos.coords);
 
       let d = new Date(pos.timestamp);
       let hours = d.getHours(),
@@ -46,7 +46,7 @@ function getBrowserLocation() {
       document.querySelector("#longitude-input").value =  pos.coords.longitude;
       // document.querySelector("form").removeChild(document.querySelector("h3"));
       // document.querySelector("#create-button").disabled = false;
-      console.log('done');
+      // console.log('done');
 
     });
   };

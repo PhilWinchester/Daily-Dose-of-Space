@@ -1,14 +1,8 @@
 const index = require('express').Router();
 const path = require('path');
-// const { randomUnsplashImage } = require("../services/unsplash");
-
-// const index = express.Router();
 
 // This is the route that serves your '/' homepage
 index.get('/', (req, res) => {
-  // res.render('index', {
-  //   bgImage: res.backgroundImage
-  // });
   res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 

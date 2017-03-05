@@ -23,12 +23,9 @@ const { loadData, storeData }           = require("../lib/weatherAlgorithm");
 //     chanceLabel : res.dataObj.chanceInnerHTML,
 //   });
 // });
-router.get("/", getUserByIdMW, getOpenWeatherData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
-  console.log(res.user);
-  res.render("data", {
-    imgSrc : res.dataObj.imgSrc,
-    chanceLabel : res.dataObj.chanceInnerHTML,
-  });
+router.post("/", getOpenWeatherData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
+  console.log(req.body.fetchPos);
+  res.json(res.dataObj);
 });
 
 //initial implementation used /data/getData and I couldn't fully remove error from this so this path covers that error

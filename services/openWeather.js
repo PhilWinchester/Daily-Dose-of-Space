@@ -5,6 +5,7 @@ const API_KEY = process.env.OPENWEATHER_KEY;
 
 function getOpenWeatherData(req,res,next) {
   console.log("Open Weather Fetch");
+  console.log(req.body.fetchPos);
   fetch(`${API_URL}lat=${res.user.latitude.slice(0,7)}&lon=${res.user.longitude.slice(0,7)}&appid=${API_KEY}`)
   .then(r => r.json())
   .then((result) => {
