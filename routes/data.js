@@ -50,7 +50,7 @@ router.post("/postData", (req,res) => {
 });
 
 //Each API's individual route
-router.get("/openweather", getOpenWeatherData, (req,res) => {
+router.post("/openweather", getOpenWeatherData, (req,res) => {
   res.json(res.openWeatherData);
 });
 

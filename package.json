@@ -1,5 +1,5 @@
 {
-  "name": "Sunset Calculator",
+  "name": "Sunset Watcher",
   "version": "2.0.0",
   "description": "Single page app to calculate the quality of your local sunset",
   "engines": {
@@ -25,13 +25,11 @@
     "ejs": "^2.5.2",
     "express": "^4.14.0",
     "express-session": "^1.14.1",
-    "express-vue": "^3.7.2",
     "method-override": "^2.3.6",
     "mongodb": "^2.2.11",
     "morgan": "^1.7.0",
     "node-fetch": "^1.6.3",
     "node-sunsetwx": "0.0.1",
-    "path": "^0.12.7",
-    "vue": "^2.2.1"
+    "path": "^0.12.7"
   }
 }

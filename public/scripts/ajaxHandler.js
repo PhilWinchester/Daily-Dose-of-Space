@@ -1,12 +1,23 @@
 function fetchPrediction(fetchPos) {
   console.log(fetchPos);
-  return fetch('/data', {
+  return fetch('/data/openweather', {
+    headers: {
+      'Content-Type':'application/json'
+    },
     method: 'POST',
-    body: JSON.stringify({
-      latitude: 'document.querySelector("#latitude-input").value',
-      longitude: 'document.querySelector("#longitude-input").value',
-      time: 'n/a'
-    })
+    mode: 'no-cors',
+    body: JSON.stringify(fetchPos),
   })
   .then(r => r.json())
+  // return fetch('/user/login', {
+  //     headers: {
+  //       'Content-Type':'application/json'
+  //     },
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       username: username,
+  //       password: password
+  //     }),
+  //   })
+  //   .then(r => r.json())
 }

@@ -19,6 +19,7 @@ const PORT                 = process.argv[2] || process.env.PORT || 3000;
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 app.use(cookieParser());
 app.use(session({
@@ -27,8 +28,8 @@ app.use(session({
   secret: SECRET
 }));
 
-app.set('view engine', 'ejs');
-app.set("views", "views");
+// app.set('view engine', 'ejs');
+// app.set("views", "views");
 
 app.use("/", indexRoutes);
 app.use("/auth", authRoutes);
