@@ -8,14 +8,22 @@
 
 (() => {
   getBrowserLocation();
+  addZipEvent();
+  addSunsetEvent();
 
+})();
+
+function addZipEvent() {
   document.querySelector('#zip-lookup').addEventListener('click', () => {
-    fetchPrediction(document.querySelector('#zip-input').value)
+    fetchZipData(document.querySelector('#zip-input').value)
       .then(zipResp => {
         console.log(zipResp);
       })
       .catch(err => console.log(err))
+  });
+};
 
+function addSunsetEvent() {
   document.querySelector('#sunset-lookup').addEventListener('click', () => {
     let fetchPos = {
       latitude: document.querySelector('#latitude-input').value,
@@ -29,8 +37,4 @@
       })
       .catch(err => console.log(err))
   });
-
-  });
-
-
-})();
+}

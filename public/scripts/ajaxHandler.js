@@ -1,4 +1,3 @@
-
 function fetchPrediction(fetchPos) {
   console.log(fetchPos);
   return fetch('/data', {
@@ -12,12 +11,25 @@ function fetchPrediction(fetchPos) {
 }
 
 function fetchZipData(zip) {
+  console.log(zip);
   return fetch('/data/zipcodes', {
     headers: {
       'Content-Type':'application/json'
     },
     method: 'POST',
     body: JSON.stringify(zip),
+  })
+  .then(r => r.json())
+}
+
+function fetchCityData(cityStr) {
+  console.log(cityStr);
+  return fetch('/data/cityname', {
+    headers: {
+      'Content-Type':'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify(cityStr),
   })
   .then(r => r.json())
 }
