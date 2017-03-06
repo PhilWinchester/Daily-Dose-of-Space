@@ -12,7 +12,6 @@ function fetchPrediction(fetchPos) {
 }
 
 function fetchZipData(zip) {
-  console.log(zip);
   return fetch('/data/zipcodes', {
     headers: {
       'Content-Type':'application/json'

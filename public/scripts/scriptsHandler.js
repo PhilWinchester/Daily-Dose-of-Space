@@ -9,7 +9,14 @@
 (() => {
   getBrowserLocation();
 
-  document.querySelector('.cloud-data').addEventListener('click', () => {
+  document.querySelector('#zip-lookup').addEventListener('click', () => {
+    fetchPrediction(document.querySelector('#zip-input').value)
+      .then(zipResp => {
+        console.log(zipResp);
+      })
+      .catch(err => console.log(err))
+
+  document.querySelector('#sunset-lookup').addEventListener('click', () => {
     let fetchPos = {
       latitude: document.querySelector('#latitude-input').value,
       longitude: document.querySelector('#longitude-input').value,
@@ -21,6 +28,8 @@
         console.log(sunsetData);
       })
       .catch(err => console.log(err))
+  });
+
   });
 
 
