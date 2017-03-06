@@ -12,18 +12,11 @@ const { getSunsetTimeData }             = require("../services/sunsetTime");
 const { getAirNowData }                 = require("../services/airnow");
 const { getForecastGovData }            = require("../services/forecastGov");
 const { getAerisData }                  = require("../services/aeris");
+const { getLatLongByZip, getLatLongByCity } = require("../services/latlongHelper")
 
 const { loadData, storeData }           = require("../lib/weatherAlgorithm");
-const zipcodes                          = require('zipcodes');
 
 //Main data route - gets userID and then using that will API Fetch with their Long/Lat and then load/store data from those fetches. Displaying them on data.ejs
-// router.get("/", sunsewxLogin, getUserByIdMW, getOpenWeatherData, getSunsetWXData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
-//   console.log(res.user);
-//   res.render("data", {
-//     imgSrc : res.dataObj.imgSrc,
-//     chanceLabel : res.dataObj.chanceInnerHTML,
-//   });
-// });
 router.post("/", getOpenWeatherData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
   console.log(req.body.fetchPos);
   res.json(res.dataObj);
@@ -32,11 +25,17 @@ router.post("/", getOpenWeatherData, getDarkSkyData, getWeatherUndergroundData, 
 router.post("/zipcodes", (req,res) => {
   console.log(req.body.zip);
 
-  res.zipResponse = zipcodes.lookup(parseInt(req.body.zip));
-
   console.log(res.zipResponse);
 
   res.json(res.zipResponse);
+});
+
+router.post("/cityname", (req,res) => {
+  console.log(req.body.cityStr);
+
+  console.log(res.cityResponse);
+
+  res.json(res.cityResponse);
 });
 
 //initial implementation used /data/getData and I couldn't fully remove error from this so this path covers that error
