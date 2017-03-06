@@ -1,3 +1,4 @@
+
 function fetchPrediction(fetchPos) {
   console.log(fetchPos);
   return fetch('/data', {
@@ -8,15 +9,16 @@ function fetchPrediction(fetchPos) {
     body: JSON.stringify(fetchPos),
   })
   .then(r => r.json())
-  // return fetch('/user/login', {
-  //     headers: {
-  //       'Content-Type':'application/json'
-  //     },
-  //     method: 'POST',
-  //     body: JSON.stringify({
-  //       username: username,
-  //       password: password
-  //     }),
-  //   })
-  //   .then(r => r.json())
+}
+
+function fetchZipData(zip) {
+  console.log(zip);
+  return fetch('/data/zipcodes', {
+    headers: {
+      'Content-Type':'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify(zip),
+  })
+  .then(r => r.json())
 }
