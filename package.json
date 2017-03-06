@@ -16,7 +16,8 @@
     "morgan": "^1.8.1",
     "node-fetch": "^1.6.3",
     "node-sunsetwx": "0.0.1",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "zipcodes": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {

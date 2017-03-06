@@ -11,11 +11,11 @@
 
   document.querySelector('.cloud-data').addEventListener('click', () => {
     let fetchPos = {
-      latitude: "document.querySelector('#latitude-input').value",
-      longitude: "document.querySelector('#longitude-input').value",
+      latitude: document.querySelector('#latitude-input').value,
+      longitude: document.querySelector('#longitude-input').value,
       time: 'n/a'
     }
-    
+
     fetchPrediction(fetchPos)
       .then(sunsetData => {
         console.log(sunsetData);

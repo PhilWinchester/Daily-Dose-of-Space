@@ -1,11 +1,10 @@
 function fetchPrediction(fetchPos) {
   console.log(fetchPos);
-  return fetch('/data/openweather', {
+  return fetch('/data', {
     headers: {
       'Content-Type':'application/json'
     },
     method: 'POST',
-    mode: 'no-cors',
     body: JSON.stringify(fetchPos),
   })
   .then(r => r.json())

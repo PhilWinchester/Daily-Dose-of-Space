@@ -8,6 +8,7 @@ function getAirNowData(req,res,next) {
   fetch(`${API_URL}latitude=${req.body.latitude.slice(0,7)}&longitude=${req.body.longitude.slice(0,7)}&distance=150&API_KEY=${API_KEY}`)
   .then(r => r.json())
   .then((result) => {
+    console.log(result);
     res.airNowData = result;
     next();
   })
