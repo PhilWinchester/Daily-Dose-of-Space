@@ -4,7 +4,7 @@ const API_URL = "http://api.sunrise-sunset.org/json?";
 
 function getSunsetTimeData(req,res,next) {
   console.log("Sunset Time Fetch");
-  fetch(`${API_URL}lat=${res.user.latitude}&lng=${res.user.longitude}`)
+  fetch(`${API_URL}lat=${req.body.latitude}&lng=${req.body.longitude}`)
   .then(r => r.json())
   .then((result) => {
     res.sunsetTimeData = result;

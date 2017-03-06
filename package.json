@@ -1,35 +1,36 @@
 {
-  "name": "Sunset Watcher",
-  "version": "2.0.0",
-  "description": "Single page app to calculate the quality of your local sunset",
-  "engines": {
-    "node": "6.6.0"
-  },
+  "name": "sunset-calculator",
+  "version": "1.0.0",
+  "description": "https://sunset-calculator.herokuapp.com/",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/PhilWinchester/Sunset-Watcher"
-  },
-  "author": "Phil Winchester",
-  "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.3.0",
-    "body-parser": "^1.15.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.0",
     "cookie-parser": "^1.4.3",
     "crypto": "0.0.3",
-    "dotenv": "^2.0.0",
-    "ejs": "^2.5.2",
-    "express": "^4.14.0",
-    "express-session": "^1.14.1",
-    "method-override": "^2.3.6",
-    "mongodb": "^2.2.11",
-    "morgan": "^1.7.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.0",
+    "express-session": "^1.15.1",
+    "method-override": "^2.3.7",
+    "mongodb": "^2.2.24",
+    "morgan": "^1.8.1",
     "node-fetch": "^1.6.3",
     "node-sunsetwx": "0.0.1",
     "path": "^0.12.7"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhilWinchester/Sunset-Watcher"
+  },
+  "author": "Phil Winchester",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhilWinchester/Sunset-Watcher/issues"
+  },
+  "homepage": "https://github.com/PhilWinchester/Sunset-Watcher#readme"
 }
