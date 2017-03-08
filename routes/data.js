@@ -22,18 +22,14 @@ router.post("/", getOpenWeatherData, getDarkSkyData, getWeatherUndergroundData, 
   res.json(res.dataObj);
 });
 
-router.post("/zipcodes", (req,res) => {
-  console.log(req.body.zip);
-
-  console.log(res.zipResponse);
+router.post("/zipcodes", getLatLongByZip, (req,res) => {
+  console.log("Zipcode route hit", req.body);
 
   res.json(res.zipResponse);
 });
 
-router.post("/cityname", (req,res) => {
-  console.log(req.body.cityStr);
-
-  console.log(res.cityResponse);
+router.post("/cityname", getLatLongByCity, (req,res) => {
+  console.log("Cityname route hit", req.body);
 
   res.json(res.cityResponse);
 });

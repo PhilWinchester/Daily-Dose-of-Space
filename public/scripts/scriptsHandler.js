@@ -2,7 +2,7 @@
  1 - Swap sunsets to be stored using PSQL
  2 - Users in MongoDB have pointers to entries in PSQL
    - give users favorite locations
- 3 -
+ 3 - if the user logged in then show their past sunsets, if not logged in show weather … or just leave blank
  4 -
 */
 
@@ -15,7 +15,10 @@
 
 function addZipEvent() {
   document.querySelector('#zip-lookup').addEventListener('click', () => {
-    fetchZipData(document.querySelector('#zip-input').value)
+    let zipcode = {
+      zipcode: document.querySelector('#zip-input').value
+    }
+    fetchZipData(zipcode)
       .then(zipResp => {
         console.log(zipResp);
       })
