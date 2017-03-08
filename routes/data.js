@@ -25,13 +25,13 @@ router.post("/", getOpenWeatherData, getDarkSkyData, getWeatherUndergroundData, 
 router.post("/zipcodes", getLatLongByZip, (req,res) => {
   console.log("Zipcode route hit", req.body);
 
-  res.json(res.zipResponse);
+  res.json(res.latLongResponse);
 });
 
-router.post("/cityname", getLatLongByCity, (req,res) => {
+router.post("/cityname", getLatLongByCity, getLatLongByZip, (req,res) => {
   console.log("Cityname route hit", req.body);
 
-  res.json(res.cityResponse);
+  res.json(res.latLongResponse);
 });
 
 //initial implementation used /data/getData and I couldn't fully remove error from this so this path covers that error

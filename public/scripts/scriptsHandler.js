@@ -15,14 +15,28 @@
 
 function addZipEvent() {
   document.querySelector('#zip-lookup').addEventListener('click', () => {
-    let zipcode = {
-      zipcode: document.querySelector('#zip-input').value
+    if (parseInt(document.querySelector('#zip-input').value) > 0) {
+      let zipcode = {
+        zipcode: document.querySelector('#zip-input').value
+      }
+      fetchZipData(zipcode)
+        .then(zipResp => {
+          console.log(zipResp);
+        })
+        .catch(err => console.log(err))
+    } else {
+      let cityStr = document.querySelector('#city-input').value;
+      let cityObj = {
+        city: cityStr.split(',')[0],
+        state: cityStr.split(',')[1]
+      }
+      console.log(cityObj);
+      fetchCityData(cityObj)
+        .then(zipResp => {
+          console.log(zipResp);
+        })
+        .catch(err => console.log(err))
     }
-    fetchZipData(zipcode)
-      .then(zipResp => {
-        console.log(zipResp);
-      })
-      .catch(err => console.log(err))
   });
 };
 

@@ -6,10 +6,17 @@ const API_KEY                 = process.env.ZIPCODE_KEY;
 
 function getLatLongByZip(req,res,next) {
   console.log("Zip api fetch", req.body);
-  fetch(`${API_URL}${API_KEY}/info.json/${req.body.zipcode}/degrees`)
+  let zipQuery = ""
+  if (req.body.zipcode != undefined) {
+    zipQuery = req.body.zipcode;
+  } else {
+    zipQuery = res.zipResponse;
+  }
+  console.log("zipQuery", zipQuery);
+  fetch(`${API_URL}${API_KEY}/info.json/${zipQuery}/degrees`)
     .then(r => r.json())
     .then((result) => {
-      res.zipResponse = result;
+      res.latLongResponse = result;
       next();
     })
     .catch((err) => {

@@ -22,14 +22,14 @@ function fetchZipData(zip) {
   .then(r => r.json())
 }
 
-function fetchCityData(cityStr) {
-  console.log(cityStr);
+function fetchCityData(cityObj) {
+  console.log(cityObj);
   return fetch('/data/cityname', {
     headers: {
       'Content-Type':'application/json'
     },
     method: 'POST',
-    body: JSON.stringify(cityStr),
+    body: JSON.stringify(cityObj),
   })
   .then(r => r.json())
 }
