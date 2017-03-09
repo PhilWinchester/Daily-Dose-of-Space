@@ -6,6 +6,8 @@ const API_URL = "https://sunburst.sunsetwx.com/v1/quality?type=sunset";
 const API_EMAIL = process.env.SUNSETWX_EMAIL;
 const API_PASSWORD = process.env.SUNSETWX_PASSWORD;
 
+//could structure it so that when a user logs in...then I register the key
+//and just bet that they won't be doing this longer than 6 hours
 function sunsetwxLogin(req,res,next) {
   let loginInfo = {
     email: API_EMAIL.toLowerCase(),
