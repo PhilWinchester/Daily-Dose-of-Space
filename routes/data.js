@@ -5,7 +5,7 @@ const { deleteEntry, updateEntry, getEntry } = require("../models/favorites");
 const { getSunsetToken }                = require("../models/user");
 
 const { getOpenWeatherData }            = require("../services/openWeather");
-const { sunsewxLogin, getSunsetWXData } = require("../services/sunsetwx");
+const { sunsetwxLogin, getSunsetWXData } = require("../services/sunsetwx");
 const { getDarkSkyData }                = require("../services/darksky");
 const { getWeatherUndergroundData }     = require("../services/weatherUnderground");
 const { getSunsetTimeData }             = require("../services/sunsetTime");
@@ -60,7 +60,7 @@ router.post("/openweather", getOpenWeatherData, (req,res) => {
   res.json(res.openWeatherData);
 });
 
-router.get("/sunsetwx", getSunsetWXData, (req,res) => {
+router.get("/sunsetwx", sunsetwxLogin, getSunsetWXData, (req,res) => {
   console.log(res.sunsetWxData.features[0].properties.quality);
   res.json(res.sunsetWxData);
 });
