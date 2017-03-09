@@ -9,7 +9,6 @@ function getOpenWeatherData(req,res,next) {
   fetch(`${API_URL}lat=${req.body.latitude.slice(0,7)}&lon=${req.body.longitude.slice(0,7)}&appid=${API_KEY}`)
   .then(r => r.json())
   .then((result) => {
-    console.log(result);
     res.openWeatherData = result;
     next();
   })

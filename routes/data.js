@@ -17,7 +17,7 @@ const { getLatLongByZip, getLatLongByCity } = require("../services/latlongHelper
 const { loadData, storeData }           = require("../lib/weatherAlgorithm");
 
 //Main data route - gets userID and then using that will API Fetch with their Long/Lat and then load/store data from those fetches. Displaying them on data.ejs
-router.post("/", getOpenWeatherData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
+router.post("/", sunsetwxLogin, getSunsetWXData, getOpenWeatherData, getDarkSkyData, getWeatherUndergroundData, getSunsetTimeData, getAirNowData, getForecastGovData, getAerisData, loadData, storeData, (req,res) => {
   console.log(req.body.fetchPos);
   res.json(res.dataObj);
 });
@@ -61,7 +61,7 @@ router.post("/openweather", getOpenWeatherData, (req,res) => {
 });
 
 router.get("/sunsetwx", sunsetwxLogin, getSunsetWXData, (req,res) => {
-  console.log(res.sunsetWxData.features[0].properties.quality);
+  // console.log(res.sunsetWxData.features[0].properties.quality);
   res.json(res.sunsetWxData);
 });
 

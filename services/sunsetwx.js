@@ -11,7 +11,7 @@ function sunsetwxLogin(req,res,next) {
     email: API_EMAIL.toLowerCase(),
     password: API_PASSWORD
   };
-  console.log(loginInfo);
+
   fetch('https://sunburst.sunsetwx.com/v1/login', {
     headers: {
       'Content-Type':'application/x-www-form-urlencoded; charset=utf-8'
@@ -20,8 +20,8 @@ function sunsetwxLogin(req,res,next) {
     body: urlencoded(loginInfo)
   })
     .then(r => r.json())
-    .then(resp => {
-      console.log(resp);
+    .then(token => {
+      res.sunsetwx_authorization = token.token
       next();
     })
     .catch(err => next(err))
@@ -31,7 +31,9 @@ function getSunsetWXData(req,res,next) {
   const header = {
     "Authorization" : "Bearer " + res.sunsetwx_authorization
   };
-  console.log("Sunsetwx Fetch", header);
+  //These guys do longitude first latitude second
+  //longitude: -77.8600012 latitude: 40.7933949
+
   fetch(`${API_URL}&coords=${req.body.longitude}%2C${req.body.latitude}`, {
     headers: header
   })
